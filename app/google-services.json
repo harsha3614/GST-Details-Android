@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047961547439",
+    "project_id": "gstapp-3daa6",
+    "storage_bucket": "gstapp-3daa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047961547439:android:c03f43235f3684f6bcda5a",
+        "android_client_info": {
+          "package_name": "com.example.signuploginrealtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTRccTa6XQarEpeB-nJBQ5yePvHzWExuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

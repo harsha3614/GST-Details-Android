@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/Add_Auditors"
+        android:title="Add Auditors" />
+    <item
+        android:id="@+id/Projects"
+        android:title="Projects/Services" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout" />
+</menu>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GST Bill Invoice"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewHeading"
+            android:layout_marginTop="8dp"
+            android:hint="Customer Name"/>
+
+        <EditText
+            android:id="@+id/editTextCustomerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextCustomerName"
+            android:layout_marginTop="8dp"
+            android:hint="Customer Address"/>
+
+        <EditText
+            android:id="@+id/editTextCustomerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextCustomerAddress"
+            android:layout_marginTop="8dp"
+            android:inputType="phone"
+            android:hint="Customer Phone"/>
+
+        <EditText
+            android:id="@+id/editTextProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextCustomerPhone"
+            android:layout_marginTop="16dp"
+            android:hint="Product Name"/>
+
+        <EditText
+            android:id="@+id/editTextQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextProductName"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="Quantity"/>
+
+        <EditText
+            android:id="@+id/editTextPricePerUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextQuantity"
+            android:layout_marginTop="8dp"
+            android:inputType="numberDecimal"
+            android:hint="Price per Unit"/>
+
+        <EditText
+            android:id="@+id/editTextGSTRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPricePerUnit"
+            android:layout_marginTop="8dp"
+            android:inputType="numberDecimal"
+            android:hint="GST Rate (%)"/>
+
+        <ScrollView
+            android:id="@+id/scrollViewItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextGSTRate"
+            android:layout_marginTop="16dp">
+
+            <TableLayout
+                android:id="@+id/tableLayoutItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <!-- Table Headings -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Product Name"
+                        android:textColor="@color/black"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Quantity"
+                        android:textColor="@color/black"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Price per Unit"
+                        android:textColor="@color/black"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="GST Rate (%)"
+                        android:textColor="@color/black"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Total Price"
+                        android:textColor="@color/black"
+                        android:padding="8dp"/>
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnCalculateTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scrollViewItems"
+            android:layout_marginTop="16dp"
+            android:text="Calculate Total"
+            android:onClick="calculateTotal"/>
+
+        <TextView
+            android:id="@+id/textViewTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnCalculateTotal"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:text="Total Amount: "/>
+
+        <Button
+            android:id="@+id/btnSharePDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTotalAmount"
+            android:layout_marginTop="16dp"
+            android:text="Share PDF"
+            android:onClick="sharePDF"/>
+    </RelativeLayout>
+</ScrollView>

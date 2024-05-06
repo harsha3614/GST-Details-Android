@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="GST"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+
+
+
+
+    <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".display_services"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Services"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Auditors"
+            android:exported="false" />
+        <activity
+            android:name=".Auditor"
+            android:exported="false" />
+        <activity
+            android:name=".Service"
+            android:exported="false" />
+        <activity
+            android:name=".enterprise_home"
+            android:exported="false" />
+        <activity
+            android:name=".enterprise_signup_page"
+            android:exported="false" />
+        <activity
+            android:name=".enterprise_login_page"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_home_page"
+            android:exported="false" />
+        <activity
+            android:name=".add_enterprise_list"
+            android:exported="false" />
+        <activity
+            android:name=".Enterprise"
+            android:exported="false" />
+        <activity
+            android:name=".GstInvoiceMakerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Rate_app"
+            android:exported="false" />
+        <activity
+            android:name=".Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".GstCalculationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Upload_gst_act"
+            android:exported="false" />
+        <activity
+            android:name=".UploadGstRulesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfRules"
+            android:exported="false" />
+        <activity
+            android:name=".pdf_act"
+            android:exported="false" />
+        <activity
+            android:name=".PdfListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".upload_Pdf"
+            android:exported="false" />
+        <activity
+            android:name=".admin_home"
+            android:exported="false" />
+        <activity
+            android:name=".user_type"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".admin_login"
+            android:exported="false" />
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".videoslist"
+            android:exported="false" />
+        <activity
+            android:name=".upload_videos"
+            android:exported="false" />
+        <activity
+            android:name=".NewsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddNews"
+            android:exported="false" />
+        <activity
+            android:name=".videos"
+            android:exported="false" />
+        <activity
+            android:name=".News"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

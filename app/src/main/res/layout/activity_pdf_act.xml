@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PdfListActivity"
+   >
+
+    <View
+        android:id="@+id/blueBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/blue" />
+
+    <!-- Menu Icon -->
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_menu"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:contentDescription="Menu Icon" />
+
+    <TextView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="GST Acts"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/pdfListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/blueBar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:divider="@android:color/white"
+        android:dividerHeight="8dp" />
+</RelativeLayout>
